@@ -1,0 +1,27 @@
+1.
+a) 3;
+b) -2;
+c) 3;
+d) 10;
+
+2.
+a) 5;
+b) 0x7ffc380220c0;
+c) 8;
+d) 0x7ffdabf75a74, 100;
+
+3.
+a) legal, o ponteiro p recebe o endereço da primeira posição do vetor v, 0x7ffcdc5296e0;
+b) ilegal;
+c) legal, o ponteiro p recebe o endereço da primeira posição do vetor v;
+d) ilegal;
+e) legal, o ponteiro p começa a apontar para um endereço dois espaços a frente de v através de aritmética de ponteiros;
+
+4.
+a) 2
+b) 6
+c) 8
+d) 3
+e) 10
+
+
