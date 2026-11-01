@@ -17,6 +17,15 @@ void reset(Pilha *pilha){
         pilha->tamanho = 0;
 }
 
+Pilha *create(void){
+	Pilha *pilha = malloc(sizeof(Pilha));
+
+	if(pilha == NULL) return NULL;
+
+	reset(pilha);
+	return pilha;
+}
+
 int empty(Pilha *pilha){
         if(pilha->topo == NULL) return 1;
 
@@ -39,7 +48,7 @@ void push(Pilha *pilha, Item item){
 	pilha->topo = novo;
 	pilha->tamanho++;
 
-	printf("push com sucesso");
+	//printf("push com sucesso\n");
 }
 
 Item pop(Pilha *pilha){
@@ -76,6 +85,16 @@ void top(Pilha *pilha){
 	printf("item do topo: %c", pilha->topo->item.c);
 }
 
+Item get(Pilha *pilha){
+	if(pilha->topo == NULL){
+		printf("lista vazia");
+		Item erro = {'\0'};
+                return erro;
+	}
+
+	return pilha->topo->item;
+}
+
 void clear(Pilha *pilha){
 	Node *aux = NULL;
 	Node *atual = pilha->topo;
@@ -88,7 +107,7 @@ void clear(Pilha *pilha){
 	
 	pilha->tamanho = 0;
 	pilha->topo = NULL;
-	printf("lista limpa");
+//	printf("lista limpa");
 }
 
 void print(Pilha *pilha){
@@ -104,8 +123,6 @@ void print(Pilha *pilha){
 	Node *atual = pilha->topo;
 	while(atual != NULL){
 		printf(" [%c]\n", atual->item.c);
-		printf("  |\n");
-		printf("  V\n");
 		atual = atual->prox;
 	}
 }
