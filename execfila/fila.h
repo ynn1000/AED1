@@ -1,9 +1,7 @@
 #ifndef FILA_H
 #define FILA_H
 
-typedef struct {
-	int valor;
-} Item;
+#include "item.h"
 
 typedef struct fila Fila;
 

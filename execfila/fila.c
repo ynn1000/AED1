@@ -87,7 +87,7 @@ void front(Fila *fila){
                 return;
         }
 
-	printf("frente: %d\n", fila->frente->item.valor);
+	printf("%d", fila->frente->item.valor);
 }
 
 Item get(Fila *fila){
